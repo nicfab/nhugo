@@ -1,0 +1,2 @@
+{{ $txt := .Get 0 | safeHTML }}{{ $name := .Get 1 | lower | safeHTML }}{{ $anchor := anchorize $name }}
+<a href="{{ printf "%s" .Page.RelPermalink }}#{{ $anchor }}" title="{{ i18n "shortcodeAnchorTitle" }}{{ $name }}">{{ $txt }}</a>

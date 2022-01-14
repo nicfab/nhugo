@@ -1,0 +1,378 @@
+baseURL = 'https://www.nicfab.it/'
+languageCode = 'en-us'
+DefaultContentLanguage = "en"
+defaultContentLanguageInSubdir = "true"
+title = 'NicFab'
+paginate = 10
+theme = ["PaperMod", "matomo"]
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+
+[params.matomo]
+url = "https://matomo.nicfab.it"
+id = 3
+
+[params.matomo.track]
+button = "1. [EN]: **Allow** tracking (or choose 2) - [IT]: **Consento** al tracking (o scegli 2)"
+message = "**Opt-in:** **[EN]** You **allowed** tracking - **[IT]** **Hai consentito** al tracking"
+
+[params.matomo.block]
+button = "2. [EN]: **Disallow** tracking - [IT]: **Non consento** al tracking"
+message = "**Opt-out:** **[EN]** You are **not** tracked - **[IT]** I dati di sessione **non** sono raccolti."
+
+[frontmatter]
+  date = ['date', 'publishDate', 'lastmod']
+  expiryDate = ['expiryDate']
+  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+  publishDate = ['publishDate', 'date', ":default"]
+
+[author]
+  name = "NicFab"
+
+
+[languages]
+  [languages.en]
+    title = "NicFab Blog"
+    languageName = ":gb: EN"
+    languageAltTitle = "English"
+    weight = 1
+  [languages.it]
+    title = "NicFab Blog"
+    languageName = ":it: IT"
+    languageAltTitle = "Italian"
+    weight = 2
+
+    [[languages.en.menu.main]]
+    identifier = "home"
+    name = "Home"
+    pageref = "/"
+    weight = 1
+    [[languages.en.menu.main]]
+    identifier = "about"
+    name = "Me"
+    pageref = "/about"
+    weight = 2
+    [[languages.en.menu.main]]
+    identifier = "notes"
+    name = "Notes"
+    url = "https://notes.nicfab.it"
+    weight = 3
+    [[languages.en.menu.main]]
+    identifier = "t&t"
+    name = "T&T"
+    pageref = "/t-t"
+    weight = 4
+    [[languages.en.menu.main]]
+    identifier = "archive"
+    name = "Archive"
+    pageref = "archives"
+    weight = 5
+    [[languages.en.menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    pageref = "tags"
+    weight = 6
+    [[languages.en.menu.main]]
+    identifier = "privacy"
+    name = "Privacy"
+    pageref = "/privacy-policy"
+    weight = 7
+    [[languages.en.menu.main]]
+    identifier = "search"
+    name = "Search"
+    pageref = "/search"
+    weight = 8
+          
+
+    [[languages.it.menu.main]]
+    name = "Home"
+    pageref = "/"
+    weight = 1
+    [[languages.it.menu.main]]
+    name = "Me"
+    pageref = "/about.it"
+    weight = 2
+    [[languages.it.menu.main]]
+    name = "Notes"
+    url = "https://notes.nicfab.it"
+    weight = 3
+    [[languages.it.menu.main]]
+    identifier = "t&t"
+    name = "T&T"
+    pageref = "/t-t"
+    weight = 4
+    [[languages.it.menu.main]]
+    name = "Archivio"
+    pageref = "archives.it"
+    weight = 5
+    [[languages.it.menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    pageref = "tags"
+    weight = 6
+    [[languages.it.menu.main]]
+    name = "Privacy"
+    pageref = "/privacy-policy.it"
+    weight = 7
+    [[languages.it.menu.main]]
+    name = "Cerca"
+    pageref = "/search.it"
+    weight = 8
+
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+env = "production"
+title = "NicFab Blog"
+name = "NicFab"
+description = "NicFab Blog"
+keywords = ["Blog","Privacy","Legal","Digitaltech"]
+author = "NicFab"
+images = "static/images"
+DateFormat = "2 January 2006"
+displayFullLangName = true
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowFullTextinRSS = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = true
+hidemeta = false
+hideSummary = false
+ShowToc = true
+tocopen = true
+enableInlineShortcodes = true
+
+  [params.assets]
+  favicon = "favicon.ico"
+  favicon16x16 = "favicon-16x16.png"
+  favicon32x32 = "favicon-32x32.png"
+  apple_touch_icon = "apple-touch-icon.png"
+  safari_pinned_tab = "safari-pinned-tab.svg"
+
+  [params.label]
+  text = "NicFab Blog"
+  icon = "/images/logo.jpg"
+  iconHeight = 120
+
+#  [params.profileMode]
+#  enabled = true
+#  title = "NicFab Blog"
+#  subtitle = "Our digital space"
+#  imageUrl = "/images/earth.jpg"
+#  imageWidth = 1000
+#  imageHeight = 500
+#  imageTitle = "Our Blog"
+
+#    [[params.profileMode.buttons]]
+#    name = "Archive"
+#    url = "archives"
+
+#    [[params.profileMode.buttons]]
+#    name = "Posts"
+#    url = "/en/posts"
+
+#    [[params.profileMode.buttons]]
+#    name = "Tags"
+#    url = "tags"
+
+ 
+[params.homeInfoParams]
+  Title = """ Welcome to our digital space 'NicFab Blog' 
+
+
+
+
+
+<video autoplay loop width="800" height="600">
+<source src="/video/world.mp4">
+</video>
+
+  
+  """
+  Content = """[**EN**] Welcome to our Blog. 
+
+  We decided to move the blog from WordPress to Hugo, and this is our current Blog website.
+
+
+  **This website use only [**Matomo**](https://matomo.org) cookies for Web Analytics to acquire statistics in an anonymous and aggregate form relating to your navigation on the pages of this site. We enabled -do not track support-, and you can choose to deactivate opt-out. Anyway, we invite you to read the [Privacy Policy](https://www.nicfab.it/en/en/pages/privacy-policy/), where you can also [**choose opt-in or opt-out**](https://www.nicfab.it/en/en/pages/privacy-policy/#matomo-_opt-in_-or-_opt-out_) at the top of the webpage.**
+
+
+  **Feed RSS**: https://www.nicfab.it/en/en/index.xml
+
+
+***
+
+  
+  [**IT**] Benvenuto sul nostro Blog.
+
+  Abbiamo deciso di spostare il blog da WordPress a Hugo e questo è il nostro attuale sito web del blog.
+  
+
+  **Questo sito utilizza solo i cookie di [**Matomo**](https://matomo.org) per Web Analytics al fine di acquisire statistiche in forma anonima e aggregata relative alla sua navigazione sulle pagine di questo sito. Abbiamo impostato il -do not track support- lasciando la scelta all'utente di disattivare l'opt-out. In ogni caso, vi invitiamo a leggere l'[informativa sulla privacy](https://www.nicfab.it/it/it/pages/privacy-policy/), dove potete anche [**scegliere opt-in o opt-out**](https://www.nicfab.it/it/it/pages/privacy-policy/#matomo-_opt-in_-oppure-_opt-out_) nella parte superiore della stessa pagina web**.
+  
+  
+  **Feed RSS**: https://www.nicfab.it/it/it/index.xml
+  
+
+"""
+ 
+
+
+  [[params.socialIcons]]
+  name = "twitter"
+  url = "https://twitter.com/nicfab"
+
+  [[params.socialIcons]]
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/nicfab/"
+
+  [[params.socialIcons]]
+  name = "Facebook"
+  url = "https://facebook.com/nicfab"
+
+  [[params.socialIcons]]
+  name = "instagram"
+  url = "https://www.instagram.com/nfabiano"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/nicfab"
+
+  [[params.socialIcons]]
+  name = "stackoverflow"
+  url = "https://stackoverflow.com/users/17653404/nicfab"
+
+  [[params.socialIcons]]
+  name = "Mastodon"
+  url = "https://fosstodon.org/web/@nicfab"
+
+  [[params.socialIcons]]
+  name = "Matrix"
+  url = "https://matrix.nicfab.it"
+
+  [[params.socialIcons]]
+  name = "telegram"
+  url = "https://t.me/nicfabnews"
+
+  [[params.socialIcons]]
+  name = "researchgate"
+  url = "https://www.researchgate.net/profile/Nicola-Fabiano"
+
+  [[params.socialIcons]]
+  name = "orcid"
+  url = "https://orcid.org/0000-0002-8188-7656"
+
+  [[params.socialIcons]]
+  name = "scopus"
+  url = "https://www.scopus.com/authid/detail.uri?authorId=57193899794"
+
+  [[params.socialIcons]]
+  name = "publons"
+  url = "https://publons.com/researcher/1798788/nicola-fabiano/"
+
+
+
+
+  [params.cover]
+  hidden = false
+  hiddenInList = true
+  hiddenInSingle = true
+
+  #[params.editPost]
+  #URL = "https://github.com/<path_to_repo>/content"
+  #Text = "Suggest Changes"
+  #appendFilePath = true
+
+  [params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1_000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = [ "title", "permalink", "summary", "content" ]
+
+[[menu.main]]
+identifier = "categories"
+name = "categories"
+url = "/categories/"
+weight = 10
+
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.instagram]
+    disable = true
+    simple = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.youtube]
+    disable = true
+    privacyEnhanced = true
+
+    
+  [markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+    [markup.goldmark.parser.attribute]
+      block = false
+      title = true
+    [markup.goldmark.renderer]
+      hardWraps = true
+      unsafe = true
+      xhtml = false
+    [markup.highlight]
+      anchorLineNos = false
+      codeFences = true
+      guessSyntax = false
+      hl_Lines = ''
+      lineAnchors = ''
+      lineNoStart = 1
+      lineNos = false
+      lineNumbersInTable = true
+      noClasses = true
+      style = 'monokai'
+      tabWidth = 4
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"
